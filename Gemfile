@@ -18,3 +18,10 @@ group :development, :test do
 end
 gem 'rails_12factor', group: :production
 gem 'font-awesome-sass'
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-nav'
+end
+gem 'pry-doc',        group: :development
+

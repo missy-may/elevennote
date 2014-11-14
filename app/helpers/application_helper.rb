@@ -1,7 +1,8 @@
 module ApplicationHelper
   def flash_messages
-    binding.pry
+
     flash.map do |key, message|
+
       alert_type = case key
         when 'notice' then 'alert-success'
         when 'alert'  then 'alert-error'
