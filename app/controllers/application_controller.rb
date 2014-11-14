@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user
 
+  def authorize_user
+    redirect_to login_path, alert: 'Please sign in to view that page.' if current_user.nil?
+  end
+
   private
 
   def current_user
