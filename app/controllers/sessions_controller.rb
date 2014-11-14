@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
   def new
     @user = User.new
   end
+
   def create
     user = User.find_by username: user_params[:username]
     if user.present? && user.authenticate(user_params[:password])
